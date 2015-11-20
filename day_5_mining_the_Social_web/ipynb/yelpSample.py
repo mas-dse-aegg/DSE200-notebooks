@@ -38,6 +38,10 @@ CONSUMER_SECRET = None
 TOKEN = None
 TOKEN_SECRET = None
 
+import sys
+sys.path.append('/Users/yoavfreund/VaultDSE/')
+import yelpCreds
+CONSUMER_KEY,CONSUMER_SECRET,TOKEN,TOKEN_SECRET=yelpCreds.getKeys()
 
 def request(host, path, url_params=None):
     """Prepares OAuth authentication and sends the request to the API.
